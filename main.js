@@ -11,17 +11,17 @@ function doSearch() {
     }
 }
 
-// 点击搜索按钮时搜索
+// 事件监听：点击搜索按钮时搜索
 searchBtn.addEventListener('click', doSearch);
 
-// 按回车键时搜索
+// 事件监听：按回车键时搜索
 searchInput.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
         doSearch();
     }
 });
 
-// 页面加载完成后，让搜索框获得焦点
+// 页面加载完成后，让搜索框获得焦点（页面加载后自动聚焦搜索框	用户无需手动点击即可输入，提升操作效率）
 window.addEventListener('load', () => {
     searchInput.focus();
 });
